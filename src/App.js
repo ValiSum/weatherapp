@@ -42,8 +42,8 @@ class App extends Component {
               <LocationList cities={cities} onSelectedLocation={this.handleSelectedLocation} />
             </Col>
             <Col xs={12} md={12} lg={6}>
-              <Paper zDepth={4}>
-                <div className='detail'>
+              <Paper elevation={4}>
+                <div className='details'>
                   { !city ? <h2>No se ha seleccionado ninguna ciudad</h2> : <ForecastExtended city={city}/>}
                 </div>
               </Paper>

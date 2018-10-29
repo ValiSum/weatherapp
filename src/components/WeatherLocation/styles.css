@@ -18,8 +18,10 @@
   line-height: 35px;
   text-align: left;
   color: #888;
+  overflow: hidden;
 }
 
 .locationCont h1 {
   margin: 0;
+  white-space: nowrap;
 }
