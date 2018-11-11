@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
-import LocationList from "./components/LocationList";
+import LocationListContainer from "./containers/LocationListContainer";
 import ForecastExtended from "./components/ForecastExtended";
 import './App.css';
 
@@ -22,11 +22,6 @@ class App extends Component {
     this.state = {city: null};
   }
 
-  handleSelectedLocation = city => {
-    //console.log(`handleSelectionLocation ${city}`);
-    this.setState({city})
-  };
-
   render() {
     const { city } = this.state;
     return (
@@ -39,7 +34,7 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={12} md={12} lg={6}>
-              <LocationList cities={cities} onSelectedLocation={this.handleSelectedLocation} />
+              <LocationListContainer cities={cities} />
             </Col>
             <Col xs={12} md={12} lg={6}>
               <Paper elevation={4}>
