@@ -4,8 +4,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
 import LocationListContainer from "./containers/LocationListContainer";
-import ForecastExtended from "./components/ForecastExtended";
 import './App.css';
+import ForecastExtendedContainer from "./containers/ForecastExtendedContainer";
 
 const cities = [
   'Zaragoza, es',
@@ -16,14 +16,7 @@ const cities = [
 
 class App extends Component {
 
-  constructor() {
-    super();
-
-    this.state = {city: null};
-  }
-
   render() {
-    const { city } = this.state;
     return (
       <MuiThemeProvider>
         <Grid>
@@ -39,7 +32,7 @@ class App extends Component {
             <Col xs={12} md={12} lg={6}>
               <Paper elevation={4}>
                 <div className='details'>
-                  { !city ? <h2>No se ha seleccionado ninguna ciudad</h2> : <ForecastExtended city={city}/>}
+                  <ForecastExtendedContainer />
                 </div>
               </Paper>
             </Col>

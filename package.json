@@ -11,9 +11,10 @@
     "react-dom": "^16.4.1",
     "react-flexbox-grid": "^2.1.2",
     "react-redux": "^5.1.1",
-    "react-scripts": "1.1.4",
+    "react-scripts": "^2.1.1",
     "react-weathericons": "^1.0.4",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
